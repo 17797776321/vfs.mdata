@@ -36,6 +36,23 @@
       </ul>
     </div>
     <div class="banner_box4">
+      <h2 class="header">我们的优势</h2>
+      <div class="main">
+        <ul class="card_list">
+          <li class="card_box" v-for="(item,index) in cardList" :key="index" :class="{'mt':index !== 0}">
+            <div class="top_box">
+              <div class="img_box">
+                <img :src="item.img" alt="">
+              </div>
+              <h2 class="tit">{{item.tit}}</h2>
+            </div>
+            <div class="content_box">
+              <p class="des">{{item.des}}</p>
+              <p class="option" v-for="(nItem,nIndex) in item.options" :key="nIndex">{{nItem}}</p>
+            </div>
+          </li>
+        </ul>
+      </div>
     </div>
   </section>
 </template>
@@ -45,6 +62,10 @@ import pro1 from '@/assets/images/pro1.png'
 import pro2 from '@/assets/images/pro2.png'
 import pro3 from '@/assets/images/pro3.png'
 import pro4 from '@/assets/images/pro4.png'
+
+import card1 from '@/assets/images/card1.png'
+import card2 from '@/assets/images/card2.png'
+import card3 from '@/assets/images/card3.png'
 export default {
   components:{
   },
@@ -71,6 +92,26 @@ export default {
           img:pro4,
           tit:'大数据解决方案',
           des:'广告转化预测模型和系统解决方案，广告投放CTR预测模型解决方案，数据标签化处理和资产变现解决方案，个性化推荐解决方案。'
+        }
+      ],
+      cardList:[
+        {
+          img:card1,
+          tit:'数据管理',
+          des:'基于云计算，为企业提供数据收集、抓取、集成、处理等定制化服务，制定一体化数据管理解决方案',
+          options:['大数据云平台的搭建','数据集成','数据采集']
+        },
+        {
+          img:card2,
+          tit:'数据分析',
+          des:'深入理解企业业务逻辑，为企业提供定制化的数据收集、清洗、建模、分析、可视化等服务。',
+          options:['数据建模服务','算法支撑服务','数据可视化服务']
+        },
+        {
+          img:card3,
+          tit:'系统定制开发',
+          des:'完善企业业务流程系统，建立销售平台、客户关系管理、风险防范等互联网弹性架构，实现多维度后台实时查询和监测。',
+          options:['CRM系统','金融业务系统']
         }
       ]
     }
@@ -194,6 +235,62 @@ export default {
   }
   .banner_box4{
     .bgimg(750px,2658px,'../images/banner4.png',100%,100%,center,center);
+    .header{
+      padding: 67px 0;
+      font-size: 48px;
+      color: #333333;
+      line-height: 74px;
+      text-align: center;
+    }
+    .main{
+      .card_list{
+        .mt{
+          margin-top: 66px !important;
+        }
+        .card_box{
+          width: 554px;
+          height: 696px;
+          margin: 0 auto;
+          border: 2px #E4E4E4 solid;
+          background-color: #ffffff;
+          .top_box{
+            background-color: #4E95FF;
+            .img_box{
+              padding-top: 44px;
+              img{
+                display: block;
+                width: 122px;
+                margin: 0 auto;
+              }
+            }
+            .tit{
+              font-size: 32px;
+              color: #ffffff;
+              text-align: center;
+              padding-top: 30px;
+              line-height: 66px;
+            }
+          }
+          .content_box{
+            padding: 30px;
+            .des{
+              line-height: 40px;
+              font-size: 25px;
+              color: #9d9d9d;
+              text-align: center;
+              padding: 10px 0 30px 0;
+            }
+            .option{
+              text-align: center;
+              font-size: 25px;
+              color: #333333;
+              line-height: 56px;
+              font-weight: 600px;
+            }
+          }
+        }
+      }
+    }
   }
 }
 </style>
