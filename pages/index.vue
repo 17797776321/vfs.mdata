@@ -20,6 +20,20 @@
       </div>
     </div>
     <div class="banner_box3">
+      <div class="header">我们能做什么</div>
+      <ul class="main_box">
+        <li class="option" v-for="(item,index) in projectList" :key="index">
+          <div class="top_box clearfix">
+            <div class="icon_box fl">
+              <img :src="item.img" alt="">
+            </div>
+            <div class="title fl">{{item.tit}}</div>
+          </div>
+          <div class="content_box">
+            {{item.des}}
+          </div>
+        </li>  
+      </ul>
     </div>
     <div class="banner_box4">
     </div>
@@ -27,12 +41,39 @@
 </template>
 
 <script>
+import pro1 from '@/assets/images/pro1.png'
+import pro2 from '@/assets/images/pro2.png'
+import pro3 from '@/assets/images/pro3.png'
+import pro4 from '@/assets/images/pro4.png'
 export default {
   components:{
   },
   name:'Home',
   data() {
-    return {}
+    return {
+      projectList:[
+        {
+          img:pro1,
+          tit:'营销云',
+          des:'全媒体整合多渠道广告触达,线上线下数据搜集实现场景化营销,唯一恪守贴牌定制合作模式,自主溢价模式利润高。'
+        },
+        {
+          img:pro2,
+          tit:'数据管理DMP',
+          des:'全媒体整合多渠道广告触达,释放数据价值，提升营销效果全面精确的人群管理安全、开放、专业。'
+        },
+        {
+          img:pro3,
+          tit:'智子盒子',
+          des:'人工智能营销管家，线上线下数据汇通融合，智慧零售零距离营销，打破线下实体营销困境。'
+        },
+        {
+          img:pro4,
+          tit:'大数据解决方案',
+          des:'广告转化预测模型和系统解决方案，广告投放CTR预测模型解决方案，数据标签化处理和资产变现解决方案，个性化推荐解决方案。'
+        }
+      ]
+    }
   }
 }
 </script>
@@ -47,7 +88,6 @@ export default {
       font-size: 69px;
       color: #fefeff;
       line-height: 90px;
-      
     }
     .tit_en{
       font-size: 36px;
@@ -118,7 +158,39 @@ export default {
     }
   }
   .banner_box3{
-    .bgimg(750px,1600px,'../images/banner3.png',100%,100%,center,center);
+    .bgimg(690px,1540px,'../images/banner3.png',100%,100%,center,center);
+    padding: 30px;
+    .header{
+      font-size: 48px;
+      color: #cb0000;
+      text-align: center;
+    }
+    .main_box{
+      .option{
+        padding-top: 36px;
+        .top_box{
+          .icon_box{
+            width: 129px;
+            img{
+              display: block;
+              width: 100%;
+            }
+          }
+          .title{
+            font-size: 45px;
+            color:#172027;
+            line-height: 129px;
+            padding-left: 20px;
+          }
+        }
+        .content_box{
+          padding-top: 25px;
+          font-size: 28px;
+          color: #172027;
+          line-height: 44px;
+        }
+      }
+    }
   }
   .banner_box4{
     .bgimg(750px,2658px,'../images/banner4.png',100%,100%,center,center);
