@@ -20,8 +20,11 @@ export default {
 <style lang="less">
 @import '../../assets/style/common.less';
 .my_nav{
+  width: 690px;
   padding: 30px;
   background: #232425;
+  position: fixed;
+  top: 0;
   .nav_box{
     .log_box{
       vertical-align: top;

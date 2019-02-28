@@ -1,7 +1,7 @@
 <template>
-  <div>
+  <div class="layout">
     <my-nav></my-nav>
-    <nuxt />
+    <nuxt class="view_box"/>
   </div>
 </template>
 <script>
@@ -14,5 +14,10 @@ export default {
 }
 </script>
 
-<style>
+<style lang="less">
+.layout{
+  .view_box{
+    padding-top: 110px;
+  }
+}
 </style>
