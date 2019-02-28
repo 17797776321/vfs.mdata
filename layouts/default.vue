@@ -17,7 +17,7 @@ export default {
 <style lang="less">
 .layout{
   .view_box{
-    padding-top: 110px;
+    padding-top: 109px;
   }
 }
 </style>
