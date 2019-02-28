@@ -32,7 +32,7 @@ module.exports = {
   */
   css: [
     'normalize.css',
-    '~assets/style/global.css'
+    '~assets/style/global.less'
   ],
 
   /*

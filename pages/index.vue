@@ -5,9 +5,9 @@
 </template>
 
 <script>
-
 export default {
-  components:{},
+  components:{
+  },
   name:'Home',
   data() {
     return {}
@@ -17,8 +17,5 @@ export default {
 
 <style>
 .page-home{
-  width: 750px;
-  height: 100px;
-  background-color: #ff0000
 }
 </style>
