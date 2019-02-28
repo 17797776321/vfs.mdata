@@ -35,6 +35,7 @@ export default {
 .my_nav{
   position: fixed;
   top: 0;
+  z-index: 999;
   .nav_box{
     width: 690px;
     padding: 30px;
