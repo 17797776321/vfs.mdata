@@ -5,17 +5,8 @@
       <a href="javascript:void(0);" class="btn_menu fr" @click="isShow = !isShow"></a>
     </div>
     <ul class="nav_options" v-show="isShow">
-      <li class="option active">
-        <a href="javascript:void(0);">首页</a>
-      </li>
-      <li class="option">
-        <a href="javascript:void(0);">智慧数据</a>
-      </li>
-      <li class="option">
-        <a href="javascript:void(0);">解决方案</a>
-      </li>
-      <li class="option">
-        <a href="javascript:void(0);">关于我们</a>
+      <li class="option" v-for="(route,index) in menuList" :key="index" :class="{'active':routeObj.name === route.name}" @click="jump(route.path)">
+        <a href="javascript:void(0);">{{route.menu}}</a>
       </li>
     </ul>
   </div>
@@ -25,7 +16,27 @@ export default {
   name:'myNav',
   data() {
     return {
+      menuList:[
+        {name:'index',menu:'首页',path:'/'},
+        {name:'Wisdom',menu:'智慧数据',path:'/Wisdom'},
+        {name:'About',menu:'关于我们',path:'/About'},
+        {name:'Contact',menu:'联系我们',path:'/Contact'}
+      ],
       isShow:false
+    }
+  },
+  computed:{
+    routeObj(){
+      return this.$route
+    }
+  },
+  mounted() {
+    console.log(this.routeObj)
+  },
+  methods:{
+    jump(path) {
+      this.$router.push({path:path})
+      this.isShow = false
     }
   }
 }

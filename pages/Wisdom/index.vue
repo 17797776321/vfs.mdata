@@ -6,6 +6,8 @@ export default {
   name: 'Wisdom',
   data() {
     return{}
+  },
+  mounted() {
   }
 }
 </script>
