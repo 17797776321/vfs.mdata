@@ -18,7 +18,7 @@ module.exports = {
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ],
     script: [
-      { src: '/lib/flexible.js', type: 'text/javascript', charset: 'utf-8'}
+      { src: '/dist/lib/flexible.js', type: 'text/javascript', charset: 'utf-8'}
     ]
   },
   router: {
@@ -64,8 +64,10 @@ module.exports = {
     /*
     ** You can extend webpack config here
     */
-    extend(config, ctx) {
-      
+   extend(config, { isDev, isClient }) {
+        if(!isDev){
+    config.output.publicPath = './_nuxt/';
+      }
     },
     postcss: [
       require('postcss-px2rem')({
