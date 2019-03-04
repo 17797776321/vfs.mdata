@@ -24,6 +24,21 @@
           </ul>
         </div>
       </div>
+      <!-- 运营 -->
+      <div class="operate_box">
+        <div class="header">
+          <img src="../../assets/images/operate.png" alt="">
+        </div>
+        <ul class="list clearfix">
+          <li class="industry" :class="{'fl':index%2 === 0,'fr':index%2 === 1}" v-for="(item,index) in industryList" :key="index">
+            <img :src="item.img" alt="">
+            <div class="content" :class="{'color':item.isColor}">
+              <h2 class="tit">{{item.tit}}</h2>
+              <p class="des">{{item.des}}</p>
+            </div>
+          </li>
+        </ul>
+      </div>
     </div>
   </div>
 </template>
@@ -37,6 +52,13 @@ import prod1 from '@/assets/images/prod1.png'
 import prod2 from '@/assets/images/prod2.png'
 import prod3 from '@/assets/images/prod3.png'
 import prod4 from '@/assets/images/prod4.png'
+
+import industry1 from '@/assets/images/industry1.png'
+import industry2 from '@/assets/images/industry2.png'
+import industry3 from '@/assets/images/industry3.png'
+import industry4 from '@/assets/images/industry4.png'
+import industry5 from '@/assets/images/industry5.png'
+import industry6 from '@/assets/images/industry6.png'
 export default {
   name:'Solution',
   data() {
@@ -89,6 +111,45 @@ export default {
               des:'通过用户线下场景活动数据，分析用户当下时间所处的位置场景'
             }
           ]
+        }
+      ],
+      industryList:[
+        {
+          img:industry1,
+          tit:'移动互联网行业',
+          des:'洞察用户属性，提升运营效果，智能解析行业新趋势',
+          isColor:false
+        },
+        {
+          img:industry2,
+          tit:'金融行业',
+          des:'精准客群定位，促进产品推广与转化',
+          isColor:true
+          
+        },
+        {
+          img:industry3,
+          tit:'旅游行业',
+          des:'与各省市旅游局合作，监测景区人流状况并智能分析',
+          isColor:true
+        },
+        {
+          img:industry4,
+          tit:'营销行业',
+          des:'通过大数据用户画像与地理位置信息的结合，优化广告投放效果',
+          isColor:false
+        },
+        {
+          img:industry5,
+          tit:'房地产行业',
+          des:'为土地研究、区域规划、房产政策提供数据咨询和指导',
+          isColor:false
+        },
+        {
+          img:industry6,
+          tit:'公共服务',
+          des:'为国家地震灾害、春运等提供数据支持与服务',
+          isColor:true
         }
       ]
     }
@@ -170,6 +231,59 @@ export default {
               padding-top: 28px;
               margin: 0 auto;
             }
+          }
+        }
+      }
+    }
+    .operate_box{
+      padding: 25px;
+      background-color: #E3F4FB;
+      margin-top: 30px;
+      .header{
+        img{
+          display: block;
+          width: 100%;
+        }
+      }
+      .list{
+        margin: 0 auto;
+        vertical-align: top;
+        .industry{
+          width: 310px;
+          height: 300px;
+          position: relative;
+          margin-top: 25px;
+          background-color: #ffffff;
+          img{
+            display: block;
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            z-index: 2;
+          }
+          .content{
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 3;
+            color: #333333;
+            .tit{
+              padding-top: 34px;
+              padding-left: 20px;
+              font-size: 28px;
+            }
+            .des{
+              padding: 80px 20px 0 20px;
+              font-size: 20px;
+            }
+          }
+          .color{
+            background-color: #01ACF3 !important;
+            color: #ffffff !important;
           }
         }
       }
