@@ -18,9 +18,19 @@ export default {
 @import '../../assets/style/common.less';
 .page-solution{
   .banner_box{
-   .bgimg(750px,447px,'../../assets/images/banner_so.png',100%,100%,center,center);
-    .tit_cn{}
-    .tit_en{}
+    .bgimg(750px,447px,'../../assets/images/banner_so.png',100%,100%,center,center);
+    text-align: center;
+    .tit_cn{
+      font-size: 25px;
+      color: #fefeff;
+      line-height: 46px;
+      padding-top: 188px;
+    }
+    .tit_en{
+      font-size: 16px;
+      color: #fefeff;
+      line-height: 26px;
+    }
   }
 }
 </style>
