@@ -12,6 +12,17 @@
           <p class="text">{{item.text}}</p>
         </li>
       </ul>
+      <div class="pro_box">
+        <div class="box">
+          <div class="header"></div>
+          <ul class="option_list">
+            <div class="option_box">
+              <h2></h2>
+              <p></p>
+            </div>
+          </ul>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -20,6 +31,11 @@ import ability1 from '@/assets/images/ability1.png'
 import ability2 from '@/assets/images/ability2.png'
 import ability3 from '@/assets/images/ability3.png'
 import ability4 from '@/assets/images/ability4.png'
+
+// import prod1 from '@/assets/images/prod1.png'
+// import prod2 from '@/assets/images/prod2.png'
+// import prod3 from '@/assets/images/prod3.png'
+// import prod4 from '@/assets/images/prod4.png'
 export default {
   name:'Solution',
   data() {
@@ -40,6 +56,38 @@ export default {
         {
           img:ability4,
           text:'大数据预测更安全'
+        }
+      ],
+      proList:[
+        {
+          header:'精准的用户画像能力',
+          options:[
+            {
+              img:prod1,
+              tit:'线上行为',
+              des:'基于App行为数据'
+            },
+            {
+              img:prod2,
+              tit:'线下行为',
+              des:'基于场景活动数据'
+            }
+          ]
+        },
+        {
+          header:'实时的场景捕捉能力',
+          options:[
+            {
+              img:prod3,
+              tit:'线上捕捉',
+              des:'通过大数据挖掘和行为建模来推测用户当下的手机使用行为场景'
+            },
+            {
+              img:prod4,
+              tit:'线下捕捉',
+              des:'通过用户线下场景活动数据，分析用户当下时间所处的位置场景'
+            }
+          ]
         }
       ]
     }
@@ -83,6 +131,17 @@ export default {
           font-size: 18px;
           color: #666666;
           padding-top: 30px;
+        }
+      }
+    }
+    .pro_box{
+      .box{
+        .header{}
+        .option_list{
+          .option_box{
+            h2{}
+            p{}
+          }
         }
       }
     }
