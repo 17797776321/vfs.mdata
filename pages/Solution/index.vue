@@ -13,13 +13,14 @@
         </li>
       </ul>
       <div class="pro_box">
-        <div class="box">
-          <div class="header"></div>
-          <ul class="option_list">
-            <div class="option_box">
-              <h2></h2>
-              <p></p>
-            </div>
+        <div class="box" v-for="(item,index) in proList" :key="index">
+          <div class="header">{{item.header}}</div>
+          <ul class="option_list clearfix">
+            <li class="option_box fl" v-for="(nItem,nIndex) in item.options" :key="nIndex">
+              <img :src="nItem.img" alt="">
+              <h2>{{nItem.tit}}</h2>
+              <p>{{nItem.des}}</p>
+            </li>
           </ul>
         </div>
       </div>
@@ -32,10 +33,10 @@ import ability2 from '@/assets/images/ability2.png'
 import ability3 from '@/assets/images/ability3.png'
 import ability4 from '@/assets/images/ability4.png'
 
-// import prod1 from '@/assets/images/prod1.png'
-// import prod2 from '@/assets/images/prod2.png'
-// import prod3 from '@/assets/images/prod3.png'
-// import prod4 from '@/assets/images/prod4.png'
+import prod1 from '@/assets/images/prod1.png'
+import prod2 from '@/assets/images/prod2.png'
+import prod3 from '@/assets/images/prod3.png'
+import prod4 from '@/assets/images/prod4.png'
 export default {
   name:'Solution',
   data() {
@@ -136,11 +137,39 @@ export default {
     }
     .pro_box{
       .box{
-        .header{}
+        text-align: center;
+        background-color: #E3F4FB;
+        margin-top: 30px;
+        .header{
+          padding-top: 48px;
+          font-size: 26px;
+          color: #333333;
+          line-height: 50px;
+        }
         .option_list{
+          padding-top: 60px;
+          padding-bottom: 55px;
           .option_box{
-            h2{}
-            p{}
+            width: 50%;
+            img{
+              display: block;
+              width: 100px;
+              margin: 0 auto;
+            }
+            h2{
+              line-height: 36px;
+              font-size: 22px;
+              color: #00a0e9;
+              padding-top: 14px;
+            }
+            p{
+              max-width: 290px; 
+              font-size: 20px;
+              color: #666666;
+              line-height: 34px;
+              padding-top: 28px;
+              margin: 0 auto;
+            }
           }
         }
       }
