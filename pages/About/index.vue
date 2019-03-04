@@ -41,7 +41,7 @@ export default {
   .content_box{
     padding: 25px 35px;
     .title{
-      font-size: 18px;
+      font-size: 26px;
       color: #0f78e6;
       line-height: 34px;
       padding-bottom: 15px;
@@ -49,20 +49,20 @@ export default {
       &::after{
         content: "";
         display: block;
-        width: 20px;
-        height: 2px;
+        width: 40px;
+        height: 4px;
         background-color: #006FE4;
         position:absolute;
-        bottom: 11px;
-        left: 0;
+        bottom: 0px;
+        left: 2px;
       }
     }
     .text_box{
       padding-top: 12px;
       .content_text{
-        font-size: 15px;
+        font-size: 22px;
         color: #83868f;
-        line-height: 24px;
+        line-height: 34px;
         text-indent: 30px;
       }
     }
