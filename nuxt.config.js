@@ -22,6 +22,7 @@ module.exports = {
     ]
   },
   router: {
+    base:'./',
     scrollBehavior: function (to, from, savedPosition) {
       return { x: 0, y: 0 }
     }
@@ -64,11 +65,11 @@ module.exports = {
     /*
     ** You can extend webpack config here
     */
-   extend(config, { isDev, isClient }) {
-        if(!isDev){
-    config.output.publicPath = './_nuxt/';
-      }
-    },
+  //  extend(config, { isDev, isClient }) {
+  //     if(!isDev){
+  //       config.output.publicPath = './_nuxt/';
+  //     }
+  //   },
     postcss: [
       require('postcss-px2rem')({
         remUnit: 75

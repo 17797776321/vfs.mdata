@@ -58,7 +58,7 @@ import industry2 from '@/assets/images/industry2.png'
 import industry3 from '@/assets/images/industry3.png'
 import industry4 from '@/assets/images/industry4.png'
 import industry5 from '@/assets/images/industry5.png'
-import industry6 from '@/assets/images/industry6.png'
+import industry6 from '../../assets/images/industry6.png'
 export default {
   name:'Solution',
   data() {
