@@ -1,7 +1,7 @@
 <template>
   <div class="layout">
     <my-nav></my-nav>
-    <nuxt class="view_box"/>
+    <nuxt class="view_box" :key="keys"/>
     <my-footer></my-footer>
   </div>
 </template>
@@ -13,6 +13,9 @@ export default {
   components:{
     myNav,
     myFooter
+  },
+  computed:{
+    keys: new Date().getTime()
   }
 }
 </script>
