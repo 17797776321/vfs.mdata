@@ -26,6 +26,12 @@ module.exports = {
       return { x: 0, y: 0 }
     }
   },
+  layoutTransition: 'layout',
+  // or
+  transition: {
+    name: 'layout',
+    mode: 'out-in'
+  },
   /*
   ** Customize the progress-bar color
   */
