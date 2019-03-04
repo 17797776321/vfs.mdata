@@ -19,7 +19,8 @@ export default {
       menuList:[
         {name:'index',menu:'首页',path:'/'},
         {name:'Wisdom',menu:'智慧数据',path:'/Wisdom'},
-        {name:'About',menu:'关于我们',path:'/About'}
+        {name:'About',menu:'关于我们',path:'/About'},
+        {name:'Solution',menu:'解决方案',path:'/Solution'}
       ],
       isShow:false
     }
